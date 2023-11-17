@@ -2,14 +2,28 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+
+
 :root {
     --fonte-geral: 'Roboto', Bebas Neue, Sans-serif;
+    --fonte-texto: 'Lora', Times, serif;
+
+    --cor01: #000000;
+    --cor02: #5E6572;
+    --cor03: #A9B4C2;
+    --cor04: #F1FEC6;
+    --cor05: #B9E28C;
 }
 
 html, body {
     min-height: 100vh; /* Ocupar 100% da altura da tela disponível */
     margin: 0px; /* Remove uma margem entre o fundo dos elementos e a página branca */
+}
 
+p {
+    margin: 0px;  /* Remove a margem branca que fica de fundo */
 }
 
 header {
@@ -19,6 +33,7 @@ header {
     margin: 0px;
     width: 100vw;
     text-align: center;
+    box-shadow: 8px 6px 14px gray;
 }
 
 header > h1 {
@@ -32,3 +47,32 @@ header > p {
     padding-bottom: 30px;
 }
 
+section {
+    background-color: gray;
+    min-width: 100vw;
+    height: 400px;
+    margin: auto;
+}
+
+section  p {
+    position: relative;
+    padding: 10px;
+    width: 600px;
+    font-size: 2em;
+    font-family: var(--fonte-texto);
+}
+
+section#ptexto  p {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 2.2em;
+    line-height: 350px;
+    width: 1000px;
+}
+
+.branco {
+    background-image: radial-gradient(circle, white, rgb(231, 229, 229), rgba(216, 215, 215, 0.712), rgb(245, 240, 240));
+    box-shadow: inset 1px 2px 13px gray;
+}
