@@ -31,8 +31,12 @@
 }
 
 html, body {
-    max-height: 100vh; /* Ocupar 100% da altura da tela disponível */
-    margin: 0px; /* Remove uma margem entre o fundo dos elementos e a página branca */
+    max-height: 100vh;
+    min-width: 100vw; /* Ocupar 100% da altura da tela disponível */
+    margin: 0px;
+    background-image: url(imagens/backgroundimage001.jpg);
+    background-repeat: repeat;
+    background-size: cover; /* Remove uma margem entre o fundo dos elementos e a página branca */
 }
 
 p {
@@ -52,6 +56,7 @@ header {
 header > h1 {
     margin: 0px;
     padding-top: 40px;
+    
 }
 
 header > p {
@@ -61,29 +66,84 @@ header > p {
 }
 
 section {
-    background-color: gray;
-    min-width: 100vw; /*tá errado?*/
-    height: 600px;
+    margin: auto;
+    max-width: 900px; /*tá errado?*/
+    height: 500px;
 }
 
 section  p {
     position: relative;
     padding: 10px;
-    width: 600px;
+    max-width: 500px;
     font-size: 2em;
     font-family: var(--fonte-texto);
+    animation: fadein 2s;
+    top: 150px;
+    left: 40px;
 }
 
 section#ptexto  p {
     text-align: center;
     margin: auto;
     font-size: 2em;
-    width: 600px;
-    padding-top: 70px;
-    animation: fadein 2s;
+    max-width: 600px;
+    padding-top: 30px;
+    /*animation: fadein 2s;*/
+    top: 20px;
+    left: 0px;
 }
 
 .branco {
-    background-image: radial-gradient(circle, white, rgb(231, 229, 229), rgba(216, 215, 215, 0.712), rgb(245, 240, 240));
-    box-shadow: inset 0px -7px 10px rgb(95, 94, 94);
+    background-image: linear-gradient(to bottom, rgba(189, 181, 181, 0.856), rgb(231, 229, 229), rgba(216, 215, 215, 0.712), rgb(167, 165, 165));
+    /*box-shadow: inset 0px -7px 22px rgb(110, 110, 110);*/
+}
+
+.alt {
+    background-image: linear-gradient(to bottom, rgb(129, 122, 122), rgb(197, 195, 195), rgba(233, 226, 226, 0.712), rgb(243, 234, 234));
+    box-shadow: inset 2px 3px 20px rgba(73, 73, 73, 0.699);
+}
+
+img#python {
+    float: right;
+    width: 250px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+img#css {
+    float: right;
+    width: 150px;
+    margin: 0px 40px 0px 20px;
+}
+
+img#html{
+    float: right;
+    width: 130px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+/*img#js {
+    float: right;
+    width: 130px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}*/
+
+img.logo {
+    width: 130px;
+    margin: 10px;
+    margin-left: 40px;
+}
+
+div.container {
+    float: right;
+    height: 350px;
+    width: 400px;
+}
+
+img#octocat {
+    float: right;
+    width: 300px;
+    margin-bottom: 40px;
 }
